@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon Solar Systems | Clean, Reliable Solar Power in Zimbabwe</title>
+    
+    <meta name="description" content="Experience the future of energy with Horizon Solar Systems. We provide premium, reliable, and expertly installed solar solutions to power your home and business across Zimbabwe.">
+    <meta name="keywords" content="solar power zimbabwe, premium solar, horizon solar systems, solar installation harare, off-grid solutions, sustainable energy, clean energy, light theme solar">
+    <meta name="author" content="Horizon Solar Systems">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.horizonsolarsystems.co.zw/">
+    <meta property="og:title" content="Horizon Solar Systems | Clean, Reliable Solar Power in Zimbabwe">
+    <meta property="og:description" content="Harness the power of the sun with Zimbabwe's trusted partner for high-performance solar energy systems.">
+    <meta property="og:image" content="https://placehold.co/1200x630/049e4c/FFFFFF?text=Horizon+Solar">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.horizonsolarsystems.co.zw/">
+    <meta property="twitter:title" content="Horizon Solar Systems | Clean, Reliable Solar Power in Zimbabwe">
+    <meta property="twitter:description" content="Harness the power of the sun with Zimbabwe's trusted partner for high-performance solar energy systems.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/049e4c/FFFFFF?text=Horizon+Solar">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌞</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #049e4c;
+            --primary-accent: #A2D83C;
+            --light-bg: #FFFFFF;
+            --light-card: #F8F9FA;
+            --dark-text: #212529;
+            --white: #ffffff;
+            --grey-text: #6c757d;
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Manrope', sans-serif;
+            --nav-height: 80px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--dark-text);
+            line-height: 1.7;
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--dark-text);
+        }
+
+        h1 { font-size: 4rem; }
+        h2 { font-size: 2.8rem; }
+        h3 { font-size: 1.5rem; }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--grey-text);
+            max-width: 65ch;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        .section-header {
+            margin-bottom: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .section-header .subtitle {
+            text-transform: uppercase;
+            color: var(--primary-color);
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header h2 {
+            max-width: 700px;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-text);
+            transform: translateY(-3px);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* --- Navigation --- */
+        .navbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            padding: 0 2rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark-text);
+        }
+        .logo span { color: var(--primary-color); }
+
+        .nav-links a {
+            color: var(--dark-text);
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary-color); }
+        
+        .nav-btn { display: block; }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('Images/hero.jpg') no-repeat center center/cover;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .hero h1 .highlight {
+            display: inline-block;
+            color: var(--primary-accent);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin: 0 auto 2.5rem auto;
+            max-width: 600px;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        /* --- Why Choose Us Section --- */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .why-us-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .why-us-feature-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .why-us-icon {
+            flex-shrink: 0;
+            color: var(--primary-color);
+        }
+
+        .why-us-image-container {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .why-us-image-container img {
+            width: 100%;
+            display: block;
+        }
+        
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            padding: 1.5rem;
+            border-top-right-radius: 12px;
+        }
+
+        .image-overlay h4, .image-overlay p { color: var(--dark-text); }
+        
+        @media (max-width: 992px) {
+            .why-us-grid { grid-template-columns: 1fr; }
+            .why-us-image-container { margin-top: 2rem; }
+        }
+
+        /* --- Stats Counter Section --- */
+        .stats-section {
+            background-color: var(--light-card);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+        
+        .stat-item .stat-label {
+            font-size: 1rem;
+            color: var(--grey-text);
+            margin-top: 0.5rem;
+        }
+        
+        /* --- Sticky Scroll Solutions Section --- */
+        .sticky-parent {
+            position: relative;
+        }
+        
+        .sticky-container {
+            display: flex;
+            gap: 4rem;
+        }
+
+        .solutions-sticky-left {
+            width: 45%;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .solutions-image-wrapper {
+            width: 100%;
+            height: 70vh;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .solutions-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+        }
+        
+        .solutions-image-wrapper img.active {
+            opacity: 1;
+        }
+
+        .solutions-scrolling-right {
+            width: 55%;
+        }
+
+        .solution-step {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+        
+        .solution-step .step-number {
+            font-size: 5rem;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.05);
+            line-height: 1;
+        }
+
+        .solution-step h3 {
+            color: var(--dark-text);
+            margin-top: 1rem;
+        }
+
+        .solution-step ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 1.5rem;
+        }
+        
+        .solution-step li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 0.8rem;
+        }
+        
+        .solution-step li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 992px) {
+            .sticky-container { flex-direction: column; }
+            .solutions-sticky-left, .solutions-scrolling-right { width: 100%; }
+            .solutions-sticky-left {
+                position: relative;
+                height: 50vh;
+                top: auto;
+            }
+            .solutions-image-wrapper { height: 100%; }
+            .solution-step {
+                min-height: auto;
+                padding: 4rem 0;
+            }
+        }
+        
+        /* --- Testimonials Section --- */
+        .testimonials-section {
+            background-color: var(--light-card);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #E0E0E0;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            color: var(--grey-text);
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-author strong {
+            display: block;
+            color: var(--dark-text);
+        }
+        .stars { color: #efb520; }
+        
+        /* --- CTA Section --- */
+        .cta-section {
+            text-align: center;
+            padding: 6rem 1.5rem;
+            color: var(--white);
+            background: linear-gradient(rgba(4, 158, 76, 0.85), rgba(4, 158, 76, 0.9)), url('Images/final-cta.jpg') no-repeat center center/cover;
+        }
+        
+        .cta-section h2 { color: var(--white); }
+        .cta-section p { color: rgba(255,255,255,0.9); max-width: 600px; margin: 1rem auto 2rem auto; }
+        .cta-section .btn { background-color: var(--white); color: var(--dark-text); }
+        .cta-section .btn:hover { background-color: var(--dark-text); color: var(--white); }
+        
+        /* --- Footer --- */
+        .footer {
+            background-color: var(--light-card);
+            padding-top: 8rem;
+            position: relative;
+        }
+        
+        .footer-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        .footer-wave svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 120px;
+        }
+        .footer-wave .shape-fill {
+            fill: var(--light-card);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+            padding-bottom: 4rem;
+        }
+        
+        .footer-about h4 { font-size: 1.5rem; margin-bottom: 1rem; }
+
+        .footer-links h5 { font-size: 1.1rem; margin-bottom: 1rem; color: var(--dark-text); }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a, .footer-links p { color: var(--grey-text); transition: color 0.3s; }
+        .footer-links a:hover { color: var(--primary-color); }
+        
+        .footer-bottom {
+            border-top: 1px solid #E0E0E0;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+            color: var(--grey-text);
+        }
+        
+        @media(max-width: 992px) {
+            .footer-content { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media(max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2.2rem; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+
+        /* --- Sticky Mobile CTAs --- */
+        .sticky-cta-container {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 1000;
+            display: none; 
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .sticky-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .sticky-btn:hover { transform: scale(1.1); }
+        
+        .whatsapp-sticky { background-color: #25D366; }
+        .call-sticky { background-color: var(--primary-color); }
+        
+        .sticky-btn svg { width: 30px; height: 30px; }
+        
+        @media (max-width: 768px) {
+            .sticky-cta-container { display: flex; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">HORIZON<span>.</span></a>
+            <div class="nav-links">
+                <a href="#solutions">Solutions</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#testimonials">Testimonials</a>
+            </div>
+            <a href="tel:+263777370194" class="btn btn-primary nav-btn">Call For A Quote</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Join The <span class="highlight">Sun Power</span> Revolution</h1>
+                <p>Empowering Zimbabwe, today. Say goodbye to load shedding with reliable, high-performance solar solutions designed for your home and business, backed by expert support.</p>
+                <a href="tel:+263777370194" class="btn btn-primary">Call For A Free Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="section" id="why-us">
+            <div class="container">
+                <div class="why-us-grid">
+                    <div class="why-us-text fade-in">
+                        <div class="section-header" style="text-align: left; margin-bottom: 2rem; align-items: flex-start;">
+                            <p class="subtitle">SWITCH TO SOLAR NOW</p>
+                            <h2 style="margin-left: 0;">Harness the Power of the Sun for a Sustainable Tomorrow</h2>
+                        </div>
+                        <p>Experience top-tier solar panel installation tailored to your needs. Our experts ensure seamless integration, maximizing energy efficiency and minimizing your carbon footprint. Transform your space into an eco-friendly haven.</p>
+                        <div class="why-us-features">
+                            <div class="why-us-feature-item">
+                                <div class="why-us-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4>Expert Solar Installation</h4>
+                                    <p>Embrace cleaner, greener living with our professional, hassle-free installation services.</p>
+                                </div>
+                            </div>
+                            <div class="why-us-feature-item">
+                                <div class="why-us-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                </div>
+                                <div>
+                                    <h4>Energy Consultancy</h4>
+                                    <p>Get a tailored energy solution that perfectly matches your needs for a truly sustainable lifestyle.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="why-us-image-container fade-in" style="transition-delay: 0.2s;">
+                        <img src="Images/about.jpg" alt="Solar panel maintenance">
+                        <div class="image-overlay">
+                            <h4>Maintenance and Monitoring</h4>
+                            <p>Embrace the freedom of energy independence with our 24/7 support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section stats-section">
+            <div class="container">
+                 <div class="stats-grid">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number" data-target="500">0</span>+
+                        <p class="stat-label">Happy Homeowners</p>
+                    </div>
+                     <div class="stat-item fade-in" style="transition-delay: 0.1s;">
+                        <span class="stat-number" data-target="98">0</span>%
+                        <p class="stat-label">System Uptime</p>
+                    </div>
+                     <div class="stat-item fade-in" style="transition-delay: 0.2s;">
+                        <span class="stat-number" data-target="150">0</span>+
+                        <p class="stat-label">Business Solutions</p>
+                    </div>
+                     <div class="stat-item fade-in" style="transition-delay: 0.3s;">
+                        <span class="stat-number" data-target="25">0</span>
+                        <p class="stat-label">Year Panel Warranty</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section sticky-parent" id="solutions">
+            <div class="container">
+                <div class="sticky-container">
+                    <div class="solutions-sticky-left">
+                        <div class="solutions-image-wrapper">
+                            <img src="Images/solution-1.jpg" alt="Custom Solar Design" class="active" data-img-id="1">
+                            <img src="Images/solution-2.jpg" alt="Residential Solar Power" data-img-id="2">
+                            <img src="Images/solution-3.jpg" alt="Commercial Solar Power" data-img-id="3">
+                        </div>
+                    </div>
+                    <div class="solutions-scrolling-right">
+                        
+                        <div class="solution-step" data-step="1">
+                            <div class="step-number">01</div>
+                            <h3>Illuminating Tomorrow with Eco and Clean Energy</h3>
+                            <p>We believe in a brighter future powered by the limitless energy of the sun. Our commitment to clean energy is your pathway to a greener, more radiant tomorrow. We analyze your needs to create the perfect system.</p>
+                            <ul>
+                                <li>Free Energy Consultation & Site Assessment</li>
+                                <li>Custom Load Profile Analysis</li>
+                                <li>Personalized System Sizing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="solution-step" data-step="2">
+                            <div class="step-number">02</div>
+                            <h3>Residential Power, Perfected.</h3>
+                            <p>Transform your home into a beacon of sustainability. Our residential solutions are designed for seamless aesthetic integration and maximum efficiency, giving your family uninterrupted power and peace of mind.</p>
+                            <ul>
+                                <li>Complete Home Backup Systems</li>
+                                <li>Grid-Tied & Off-Grid Options</li>
+                                <li>Aesthetic Roof Integration</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-step" data-step="3">
+                            <div class="step-number">03</div>
+                            <h3>Powering Progress for Your Business.</h3>
+                            <p>Keep your business running without interruption. Our industrial and commercial solutions are built for resilience and scalability, reducing your operational costs and ensuring you never have to worry about downtime again.</p>
+                             <ul>
+                                <li>Industrial & Commercial Systems</li>
+                                <li>Agricultural Water Pumping</li>
+                                <li>Remote & Rural Electrification</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <p class="subtitle">Social Proof</p>
+                    <h2>Trusted by Zimbabweans Everywhere</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-in">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Absolutely perfect and reliable. My 5KV home system worked so well, I added a 10.2KV industrial one for my incubator. A very resilient system!"</p>
+                        <div class="testimonial-author"><strong>Simon Maneya</strong></div>
+                    </div>
+                    <div class="testimonial-card fade-in" style="transition-delay: 0.1s;">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Exceptionally efficient service. The team is always on call for after-sales support. Highly recommend to those looking for genuine solar systems."</p>
+                        <div class="testimonial-author"><strong>Trevor Mazhindu</strong></div>
+                    </div>
+                    <div class="testimonial-card fade-in" style="transition-delay: 0.2s;">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"This place is amazing — very smart, customer service is perfect. Everything just works exactly as they promise. 10/10 would recommend."</p>
+                        <div class="testimonial-author"><strong>Elisha Tsongo</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section cta-section" id="cta">
+            <div class="container fade-in">
+                <h2>Ready to Make the Switch?</h2>
+                <p>Reach out to us now and let's start a conversation about how we can serve you better. Your journey to energy independence starts with a single phone call.</p>
+                <a href="tel:+263777370194" class="btn">Call Us Now: +263 777 370 194</a>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h4 class="logo">HORIZON<span>.</span></h4>
+                    <p>Your trusted partner for reliable, cost-effective, and premium solar energy solutions in Zimbabwe. Powering tomorrow, today.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#why-us">Why Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-links">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#solutions">Residential Solar</a></li>
+                        <li><a href="#solutions">Commercial Solar</a></li>
+                        <li><a href="#solutions">Off-Grid Systems</a></li>
+                        <li><a href="#why-us">After-Sales Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><a href="tel:+263777370194">+263 777 370 194</a></li>
+                        <li><a href="https://wa.me/263777370194?text=Hello%20Horizon%20Solar!">WhatsApp Us</a></li>
+                        <li><a href="mailto:marketing@horizonsolarsystems.co.zw">Email Us</a></li>
+                        <li><p>18079 Ashdown Park, Harare</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Horizon Solar Systems. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta-container">
+        <a href="https://wa.me/263777370194?text=Hello%20Horizon%20Solar!%20I'd%20like%20a%20free%20quote." class="sticky-btn whatsapp-sticky" aria-label="WhatsApp Us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.459L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.447-4.435-9.884-9.888-9.884-5.448 0-9.886 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-.217.808.809-.216z"/></svg>
+        </a>
+        <a href="tel:+263777370194" class="sticky-btn call-sticky" aria-label="Call Us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.384,17.752a2.2,2.2,0,0,1-1.524.842,4.374,4.374,0,0,1-1.129.15,18.665,18.665,0,0,1-7.82-2.7,19.333,19.333,0,0,1-6-5.592,18.663,18.663,0,0,1-2.7-7.82,4.374,4.374,0,0,1,.15-1.129,2.2,2.2,0,0,1,.842-1.524,2.1,2.1,0,0,1,1.523-.717A2.083,2.083,0,0,1,6.8,1.82a12.871,12.871,0,0,0,2.684.664,2.013,2.013,0,0,1,1.574.757,1.8,1.8,0,0,1,.217,1.85l-1.22,2.033a15.8,15.8,0,0,0,5.78,5.78l2.033-1.22a1.8,1.8,0,0,1,1.85.217,2.013,2.013,0,0,1,.757,1.574,12.871,12.871,0,0,0,.664,2.684,2.1,2.1,0,0,1-.717,1.523Z"/></svg>
+        </a>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // General Fade-in Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+            // Stats Counter Animation
+            const statsObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-target');
+                        
+                        const updateCount = () => {
+                            const count = +counter.innerText;
+                            const increment = target / 100;
+
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + increment);
+                                setTimeout(updateCount, 20);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        updateCount();
+                        observer.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            document.querySelectorAll('.stat-number').forEach(counter => statsObserver.observe(counter));
+            
+            // *** CORRECTED STICKY SCROLL IMAGE CHANGE LOGIC ***
+            const solutionSteps = document.querySelectorAll('.solution-step');
+            const solutionImages = document.querySelectorAll('.solutions-image-wrapper img');
+            const isMobile = window.innerWidth <= 992;
+
+            if (!isMobile) {
+                // This observer configuration is now corrected.
+                // It triggers when a step is roughly in the middle of the viewport.
+                const scrollObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const stepId = entry.target.getAttribute('data-step');
+                            
+                            // Make the corresponding image active
+                            solutionImages.forEach(img => {
+                                // A clean way to add/remove the class based on the condition
+                                img.classList.toggle('active', img.getAttribute('data-img-id') === stepId);
+                            });
+                        }
+                    });
+                }, { 
+                    threshold: 0.5 // This is the key: trigger when 50% of the step is visible
+                    // The problematic rootMargin has been removed for reliability.
+                });
+
+                // Observe each of the text steps
+                solutionSteps.forEach(step => {
+                    scrollObserver.observe(step);
+                });
+
+            } else {
+                // On mobile, just show the first image as the layout is stacked.
+                const firstImage = document.querySelector('.solutions-image-wrapper img[data-img-id="1"]');
+                if (firstImage) firstImage.classList.add('active');
+            }
+
+            // Footer: Current Year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        });
+    </script>
+</body>
+</html>
