@@ -38,7 +38,7 @@
             --grey-text: #6c757d;
             --font-heading: 'Poppins', sans-serif;
             --font-body: 'Manrope', sans-serif;
-            --nav-height: 80px;
+            --nav-height: 70px; /* Adjusted nav height slightly */
         }
 
         *, *::before, *::after {
@@ -67,7 +67,7 @@
             color: var(--dark-text);
         }
 
-        h1 { font-size: 4rem; }
+        h1 { font-size: 3.5rem; }
         h2 { font-size: 2.8rem; }
         h3 { font-size: 1.5rem; }
 
@@ -160,7 +160,7 @@
             display: flex;
             align-items: center;
             z-index: 1000;
-            padding: 0 2rem;
+            padding: 0 1rem; /* Adjusted padding for mobile */
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -175,30 +175,50 @@
         
         .logo {
             font-family: var(--font-heading);
-            font-size: 1.8rem;
+            font-size: 1.5rem; /* Adjusted logo size */
             font-weight: 700;
             color: var(--dark-text);
         }
         .logo span { color: var(--primary-color); }
 
-        .nav-links a {
-            color: var(--dark-text);
-            margin: 0 1rem;
-            font-weight: 500;
-            transition: color 0.3s;
+        .nav-links {
+             display: none; /* Hide nav links on mobile by default */
         }
-        .nav-links a:hover { color: var(--primary-color); }
-        
-        .nav-btn { display: block; }
-        
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
+
+        .nav-btn { 
+            display: block; 
+            padding: 0.6rem 1rem; /* Adjusted button padding */
+            font-size: 0.8rem; /* Adjusted button font size */
         }
+        
+        @media (min-width: 768px) {
+            .navbar {
+                padding: 0 2rem;
+            }
+            .nav-links {
+                display: block; /* Show nav links on desktop */
+            }
+            .nav-links a {
+                color: var(--dark-text);
+                margin: 0 1rem;
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+            .nav-links a:hover { color: var(--primary-color); }
+            .logo {
+                font-size: 1.8rem;
+            }
+            .nav-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
 
         /* --- Hero Section --- */
         .hero {
             position: relative;
-            height: 100vh;
+            height: calc(100vh - var(--nav-height));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -209,6 +229,7 @@
 
         .hero-content {
             max-width: 800px;
+            padding: 0 1rem;
         }
 
         .hero h1 {
@@ -223,7 +244,7 @@
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             margin: 0 auto 2.5rem auto;
             max-width: 600px;
             color: rgba(255,255,255,0.9);
@@ -232,9 +253,14 @@
         /* --- Why Choose Us Section --- */
         .why-us-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            align-items: center;
+            grid-template-columns: 1fr;
             gap: 4rem;
+        }
+        
+        @media (min-width: 992px) {
+            .why-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         .why-us-features {
@@ -279,11 +305,6 @@
 
         .image-overlay h4, .image-overlay p { color: var(--dark-text); }
         
-        @media (max-width: 992px) {
-            .why-us-grid { grid-template-columns: 1fr; }
-            .why-us-image-container { margin-top: 2rem; }
-        }
-
         /* --- Stats Counter Section --- */
         .stats-section {
             background-color: var(--light-card);
@@ -316,21 +337,20 @@
         
         .sticky-container {
             display: flex;
+            flex-direction: column; /* Mobile first */
             gap: 4rem;
         }
 
         .solutions-sticky-left {
-            width: 45%;
-            height: 100vh;
-            position: sticky;
-            top: 0;
-            display: flex;
-            align-items: center;
+            width: 100%;
+            height: 50vh;
+            position: relative; /* Changed for mobile first */
+            top: auto;
         }
         
         .solutions-image-wrapper {
             width: 100%;
-            height: 70vh;
+            height: 100%;
             border-radius: 12px;
             overflow: hidden;
             position: relative;
@@ -352,15 +372,35 @@
         }
 
         .solutions-scrolling-right {
-            width: 55%;
+            width: 100%;
         }
 
         .solution-step {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            min-height: auto;
             padding: 2rem 0;
+        }
+        
+        @media (min-width: 992px) {
+            .sticky-container {
+                flex-direction: row;
+            }
+             .solutions-sticky-left {
+                width: 45%;
+                height: 100vh;
+                position: sticky;
+                top: 0;
+                display: flex;
+                align-items: center;
+            }
+            .solutions-image-wrapper {
+                height: 70vh;
+            }
+            .solutions-scrolling-right {
+                width: 55%;
+            }
+             .solution-step {
+                min-height: 80vh;
+            }
         }
         
         .solution-step .step-number {
@@ -393,21 +433,6 @@
             left: 0;
             color: var(--primary-color);
             font-weight: 600;
-        }
-        
-        @media (max-width: 992px) {
-            .sticky-container { flex-direction: column; }
-            .solutions-sticky-left, .solutions-scrolling-right { width: 100%; }
-            .solutions-sticky-left {
-                position: relative;
-                height: 50vh;
-                top: auto;
-            }
-            .solutions-image-wrapper { height: 100%; }
-            .solution-step {
-                min-height: auto;
-                padding: 4rem 0;
-            }
         }
         
         /* --- Testimonials Section --- */
@@ -487,9 +512,16 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
             padding-bottom: 4rem;
+        }
+        
+        @media(min-width: 768px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 2rem;
+            }
         }
         
         .footer-about h4 { font-size: 1.5rem; margin-bottom: 1rem; }
@@ -508,48 +540,9 @@
             color: var(--grey-text);
         }
         
-        @media(max-width: 992px) {
-            .footer-content { grid-template-columns: repeat(2, 1fr); }
-        }
         @media(max-width: 768px) {
             h1 { font-size: 2.8rem; }
             h2 { font-size: 2.2rem; }
-            .footer-content { grid-template-columns: 1fr; }
-        }
-
-        /* --- Sticky Mobile CTAs --- */
-        .sticky-cta-container {
-            position: fixed;
-            bottom: 1.5rem;
-            right: 1.5rem;
-            z-index: 1000;
-            display: none; 
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-
-        .sticky-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            color: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-        
-        .sticky-btn:hover { transform: scale(1.1); }
-        
-        .whatsapp-sticky { background-color: #25D366; }
-        .call-sticky { background-color: var(--primary-color); }
-        
-        .sticky-btn svg { width: 30px; height: 30px; }
-        
-        @media (max-width: 768px) {
-            .sticky-cta-container { display: flex; }
         }
 
     </style>
@@ -777,16 +770,6 @@
         </div>
     </footer>
 
-    <div class="sticky-cta-container">
-        <a href="https://wa.me/263777370194?text=Hello%20Horizon%20Solar!%20I'd%20like%20a%20free%20quote." class="sticky-btn whatsapp-sticky" aria-label="WhatsApp Us">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.903-.52-5.586-1.459L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.447-4.435-9.884-9.888-9.884-5.448 0-9.886 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-.217.808.809-.216z"/></svg>
-        </a>
-        <a href="tel:+263777370194" class="sticky-btn call-sticky" aria-label="Call Us">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.384,17.752a2.2,2.2,0,0,1-1.524.842,4.374,4.374,0,0,1-1.129.15,18.665,18.665,0,0,1-7.82-2.7,19.333,19.333,0,0,1-6-5.592,18.663,18.663,0,0,1-2.7-7.82,4.374,4.374,0,0,1,.15-1.129,2.2,2.2,0,0,1,.842-1.524,2.1,2.1,0,0,1,1.523-.717A2.083,2.083,0,0,1,6.8,1.82a12.871,12.871,0,0,0,2.684.664,2.013,2.013,0,0,1,1.574.757,1.8,1.8,0,0,1,.217,1.85l-1.22,2.033a15.8,15.8,0,0,0,5.78,5.78l2.033-1.22a1.8,1.8,0,0,1,1.85.217,2.013,2.013,0,0,1,.757,1.574,12.871,12.871,0,0,0,.664,2.684,2.1,2.1,0,0,1-.717,1.523Z"/></svg>
-        </a>
-    </div>
-
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             
@@ -827,40 +810,51 @@
             
             document.querySelectorAll('.stat-number').forEach(counter => statsObserver.observe(counter));
             
-            // *** CORRECTED STICKY SCROLL IMAGE CHANGE LOGIC ***
+            // CORRECTED STICKY SCROLL IMAGE CHANGE LOGIC
             const solutionSteps = document.querySelectorAll('.solution-step');
             const solutionImages = document.querySelectorAll('.solutions-image-wrapper img');
-            const isMobile = window.innerWidth <= 992;
+            const isDesktop = window.innerWidth > 992;
 
-            if (!isMobile) {
-                // This observer configuration is now corrected.
-                // It triggers when a step is roughly in the middle of the viewport.
+            if (isDesktop) {
                 const scrollObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
                             const stepId = entry.target.getAttribute('data-step');
-                            
-                            // Make the corresponding image active
                             solutionImages.forEach(img => {
-                                // A clean way to add/remove the class based on the condition
                                 img.classList.toggle('active', img.getAttribute('data-img-id') === stepId);
                             });
                         }
                     });
                 }, { 
-                    threshold: 0.5 // This is the key: trigger when 50% of the step is visible
-                    // The problematic rootMargin has been removed for reliability.
+                    threshold: 0.5 
                 });
 
-                // Observe each of the text steps
                 solutionSteps.forEach(step => {
                     scrollObserver.observe(step);
                 });
 
             } else {
-                // On mobile, just show the first image as the layout is stacked.
-                const firstImage = document.querySelector('.solutions-image-wrapper img[data-img-id="1"]');
-                if (firstImage) firstImage.classList.add('active');
+                // On mobile, the layout is stacked, so we use a different observer
+                // to simply activate the image when its corresponding text comes into view.
+                const mobileScrollObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const stepId = entry.target.getAttribute('data-step');
+                            const activeImage = document.querySelector(`.solutions-image-wrapper img[data-img-id="${stepId}"]`);
+                            
+                            // Activate the correct image
+                            solutionImages.forEach(img => img.classList.remove('active'));
+                            if(activeImage) activeImage.classList.add('active');
+
+                            // We can unobserve after it has been seen once if we want
+                            // observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.2 }); // Trigger when 20% is visible
+
+                solutionSteps.forEach(step => {
+                    mobileScrollObserver.observe(step);
+                });
             }
 
             // Footer: Current Year
